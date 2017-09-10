@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>博览列表</title>
+  <link rel="stylesheet" href="../Public/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../Public/css/admin.css">
+</head>
+
+<body>
+  <header>
+    <nav class="admin-nav-top">
+      <div class="admin-logo">
+        <a href="">
+          <img src="../Public/images/admin-logo.png" alt="">
+        </a>
+      </div>
+      <div>
+        <div class="userInfo"></div>
+      </div>
+    </nav>
+  </header>
+  <div class="container-fluid">
+    <div class="sidebar">
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-item active">
+          <a href="">陶瓷博览</a>
+        </li>
+        <li class="sidebar-menu-item">
+          <a href="">工匠精神</a>
+        </li>
+        <li class="sidebar-menu-item">
+          <a href="">薪火相传</a>
+        </li>
+        <li class="sidebar-menu-item">
+          <a href="">非遗文化</a>
+        </li>
+        <li class="sidebar-menu-item">
+          <a href="javascript:;" class="sidebar-menu-title">名家名品</a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="">名家管理</a>
+            </li>
+            <li>
+              <a href="">品牌管理</a>
+            </li>
+            <li>
+              <a href="">友情链接</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+    <div class="page-wraper">
+      <div class="crumb">
+        <div>
+          <span>陶瓷博览</span>
+          <i>></i>
+          <a href="#">文章列表</a>
+        </div>
+        <div>
+          <button type="button" class="btn btn-primary newBtn"><i></i>创建文章</button>
+          <button type="button" class="btn btn-success newBtn"><i></i>发布文章</button>
+          <button type="button" class="btn btn-warning newBtn"><i></i>隐藏文章</button>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading newPanel-heading">
+          <div class="panel-actions pull-right">
+          </div>
+          <h3 class="panel-title">文章列表</h3>
+        </div>
+        <div class="panel-body newPanel-body">
+          <table class="table table-bordered table-hover tableCon">
+            <thead>
+              <tr>
+                <th>
+                  <div class="checkbox-inline">
+                    <label>
+                      <input type="checkbox" value="" class="checkAll">
+                    </label>
+                  </div>
+                </th>
+                <th>文章名称</th>
+                <th>状态</th>
+                <th>发布时间</th>
+                <th>最新修改时间</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody class="js-newsTbody">
+                <tr>
+                  <td>
+                    <div class="checkbox-inline">
+                      <input type="checkbox" value="">
+                    </div>
+                  </td>
+                  <td>景德镇陶瓷最新现代化主题展览大会</td>
+                  <td><label class="point ed"></label>已发布</td>
+                  <td>Aug 21 2017 17:38:27</td>
+                  <td>Aug 21 2017 17:38:27</td>
+                  <td>
+                    <div><a>编辑</a><a>发布</a><a>隐藏</a></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="checkbox-inline">
+                      <input type="checkbox" value="">
+                    </div>
+                  </td>
+                  <td>1</td>
+                  <td><label class="point"></label>未发布</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>
+                    <div><a>编辑</a><a>发布</a><a>隐藏</a></div>
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+          <nav aria-label="" class="list-pagination">
+            <ul class="pagination">
+              <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+              <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/hogan" id="tr-tpml">
+    {{#news}}
+    <tr>
+      <td>
+        <div class="checkbox-inline">
+          <input type="checkbox" value="{{id}}">
+        </div>
+      </td>
+      <td>{{title}}</td>
+      <td><label class="point {{statusClass}}"></label>{{status}}</td>
+      <td>{{update_time}}</td>
+      <td>{{update_time}}</td>
+      <td>
+        <div>
+          <a href="javascript:;" class="js-editNews" data-id="{{id}}">编辑</a>
+          <a href="javascript:;" class="js-publishNews" data-id="{{id}}">发布</a>
+          <a href="javascript:;" class="js-hideNews" data-id="{{id}}">隐藏</a>
+        </div>
+      </td>
+    </tr>
+    {{/news}}
+  </script>
+
+
+  <script src="../Public/js/config.js"></script>
+  <script src="../Public/vendor/jquery/jquery.min.js"></script>
+  <script src="../Public/vendor/bootstrap/js/bootstrap.js"></script>
+  <script src="../Public/vendor/hogan-3.0.2.min.js"></script>
+  <script src="../Public/vendor/kindeditor/kindeditor-all-min.js"></script>
+  <script src="../Public/vendor/kindeditor/zh-CN.js"></script>
+
+  <script>
+    $(".checkAll").change(function(){
+      if ($(this).is(':checked')) {
+        $(".table tbody input").each(function(index, ele){
+          $(ele).prop('checked', true);
+        })
+      } else {
+        $(".table tbody input").each(function(index, ele){
+          $(ele).prop('checked', false);
+        })
+      }
+    })
+    $(".table tbody").on('change', 'input', function(e){
+      e.preventDefault();
+      var allChecked = $('.table tbody input').length;
+      var curChecked = $(".table tbody input:checked").length;
+      if (allChecked == curChecked) {
+        $(".checkAll").prop('checked', true);
+      }else{
+        $(".checkAll").prop('checked', false);
+      }
+      if ($(this).is(':checked')) {
+        $(this).prop('checked', true);
+      } else {
+        $(this).prop('checked', false);
+      }
+    }).on('click', '.js-editNews', function() {
+      // TODO: 跳转到编辑页面。
+
+    }).on('click', '.js-publishNews', function() {
+      var $this = $(this),
+        id = $this.attr('data-id');
+      $.ajax({
+        url: reqUrl + '/Article/release',
+        type: 'post',
+        data: {
+          id: id,
+          status: 1,
+        },
+        success: function(data) {
+          console.log(data);
+        }
+      });
+    }).on('click', '.js-hideNews', function() {
+      var $this = $(this),
+        id = $this.attr('data-id');
+      $.ajax({
+        url: reqUrl + '/Article/release',
+        type: 'post',
+        data: {
+          id: id,
+          status: 2,
+        },
+        success: function() {
+          console.log(data);
+        }
+      });
+    })
+
+    var trStr = $('#tr-tpml').html();
+    var trTemplate = Hogan.compile(trStr);
+    function initTable(type, status, page, size) {
+      var ty = type || 1;
+      var p = page || 1;
+      var pageSize = size || 10;
+      var offset = (p - 1) * pageSize;
+      var requestInput = {"type":[ty], "offset": offset || 0,"size": pageSize, "status": status || [0,1]}
+      $.ajax({
+        url: reqUrl + '/Article/items',
+        type: 'get',
+        data: {
+          data: JSON.stringify(requestInput)
+        },
+        success: function(data) {
+          if(data && parseInt(data.code, 10) === 0) {
+            var output = trTemplate.render({news: data.data[type].map(function(item) {
+              if(item.status == 0) {
+                item.status = '未发布'
+              } else if(item.status == 1) {
+                item.status = '已发布';
+                item.statusClass = ' ed ';
+              } else {
+                item.status = '已隐藏';
+              }
+              return item;
+            })});
+            $('.js-newsTbody').html(output);
+          }
+        }
+      });
+    }
+    initTable(1);
+  </script>
+</body>
+
+</html>

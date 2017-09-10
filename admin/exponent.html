@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>新增博览</title>
+  <link rel="stylesheet" href="../Public/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../Public/css/admin.css">
+  <link rel="stylesheet" href="../Public/css/index.css">
+  <link rel="stylesheet" href="../Public/css/admin-exponent.css">
+</head>
+
+<body>
+<header>
+  <nav class="admin-nav-top">
+    <div class="admin-logo">
+      <a href="">
+        <img src="../Public/images/admin-logo.png" alt="">
+      </a>
+    </div>
+    <div>
+      <div class="userInfo"></div>
+    </div>
+  </nav>
+</header>
+<div class="container-fluid">
+  <div class="sidebar">
+    <ul class="sidebar-menu">
+      <li class="sidebar-menu-item active haveChild exponent">
+        <a href="javascript:;" class="sidebar-menu-title">陶瓷指数</a>
+        <a class="child" href="exponent.html?type=1">陶瓷价格指数</a>
+        <a class="child" href="exponent.html?type=2">陶瓷创新指数</a>
+        <a class="child" href="exponent.html?type=3">陶瓷关注指数</a>
+        <a class="child" href="exponent.html?type=4">消费指数</a>
+        <a class="child" href="exponent.html?type=5">旅游指数</a>
+        <a class="child" href="exponent.html?type=6">环境指数</a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="">陶瓷博览</a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="">工匠精神</a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="">薪火相传</a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="">非遗文化</a>
+      </li>
+      <li class="sidebar-menu-item">
+        <a href="javascript:;" class="sidebar-menu-title">名家名品</a>
+        <ul class="sidebar-submenu">
+          <li>
+            <a href="">名家管理</a>
+          </li>
+          <li>
+            <a href="">品牌管理</a>
+          </li>
+          <li>
+            <a href="">友情链接</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+  <div class="page-wraper">
+    <div class="crumb" style="">
+      <div>
+        <span>陶瓷指数</span>
+        <i>></i>
+        <a href="#" class="type-name"></a>
+      </div>
+      <ul class="show-tyoe">
+        <li class="active" onclick="timeType(1, event)">季度显示</li>
+        <li onclick="timeType(2, event)">月度显示</li>
+        <li onclick="timeType(3, event)">半年显示</li>
+        <li onclick="timeType(4, event)">年度显示</li>
+      </ul>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading newPanel-heading">
+        <div class="panel-actions pull-right">
+        </div>
+        <h3 class="panel-title type-name"></h3>
+      </div>
+      <div class="panel-body newPanel-body">
+        <table class="table table-bordered tableCon">
+          <thead>
+          <tr>
+            <th>时间 <span class="add-time">+</span></th>
+            <th>指数</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><input type="text" value="2016.Q1" disabled> <span class="editer"></span></td>
+            <td><input type="text" value="23" disabled> <span class="editer"></span></td>
+          </tr>
+          <tr>
+            <td><input type="text" value="2016.Q2" disabled> <span class="editer"></span></td>
+            <td><input type="text" value="23" disabled> <span class="editer"></span></td>
+          </tr>
+          <tr>
+            <td><input type="text" value="2016.Q3" disabled> <span class="editer"></span></td>
+            <td><input type="text" value="23" disabled> <span class="editer"></span></td>
+          </tr>
+          <tr>
+            <td><input type="text" value="2016.Q4" disabled> <span class="editer"></span></td>
+            <td><input type="text" value="23" disabled> <span class="editer"></span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="chart relative">
+      <p>
+        <i></i>
+        陶瓷创新指数趋势
+      </p>
+      <span class="absolute">
+            <i></i>价格指数
+      </span>
+      <div id="eChart" class="chartBox"></div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../Public/jquery/dist/jquery.min.js"></script>
+<script src="../Public/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../Public/js/echarts.min.js"></script>
+
+
+<script>
+  let xAxisArr = ['2016年Q1','2016年Q2','2016年Q3','2016年Q4','2016年Q5','2016年Q6','2016年Q7'];
+  let data = [35, 24, 15, 30, 50, 40, 25];
+  function echartsInit(data, type){
+    var chart = document.getElementById("eChart");
+    var echart = echarts.init(chart);
+    let seriesArr = [
+      {
+        name: 'type',
+        type:'line',
+        itemStyle: {
+          normal: {
+            lineStyle: {
+              color: '#01abff'
+            },
+            color: '#01abff'
+          },
+          emphasis: {
+            color: '#01abff'
+          }
+        },
+        data: data
+      }
+    ]
+    var option = {
+      title: {
+        text: ''
+      },
+      tooltip : {
+        trigger: 'axis',
+        axisPointer: {
+          lineStyle: {
+            type: 'dashed'
+          }
+        },
+        backgroundColor: '#fff',
+        borderColor: '#e2e2e2',
+        borderWidth: 1,
+        textStyle: {
+          color: '#464c5b'
+        },
+        padding: [ 14, 24, 14, 12],
+        extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);',
+        formatter: function(params) {
+          var result = '';
+          result += '<p><span style="font-weight: bold;">时间：</span>'+params[0].name+'</p>'
+            + '<p><span style="font-weight: bold;">'+type+'：</span>'+params[0].value+'</p>';
+          return result;
+        }
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis : {
+        type : 'category',
+        boundaryGap : true,
+        data : xAxisArr,
+        axisLine: {
+          lineStyle: {
+            color: '#e2e2e2'
+          }
+        },
+        axisLabel: {
+          textStyle: {
+            color: '#333'
+          }
+        }
+      },
+      yAxis : {
+        type : 'value',
+        splitLine: {
+          lineStyle: {
+            type: 'dashed'
+          }
+        },
+        axisLine: {
+          show: false
+        },
+        axisTick: {
+          show: false
+        }
+      },
+      series : seriesArr
+    };
+
+    echart.setOption(option);
+  }
+
+  let num = 1;
+  $(".add-time").bind('click',function () {
+    let time = '2016.Q'+num;
+    tr = "<tr><th><input value='"+time+"'></th><th><input></th></tr>";
+    $("tbody").append(tr);
+    num++;
+  })
+
+  // 编辑时间
+  $(".editer").bind('click',function () {
+    $("input[type='text']").attr("disabled","disabled");
+    $(this).parent("td").find("input").removeAttr("disabled").focus();
+  })
+
+  $("input[type='text']").blur(function () {
+    $("input[type='text']").attr("disabled","disabled");
+  })
+
+  function getQueryString(name) {
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null)return  unescape(r[2]); return null;
+  }
+
+  // 图标展示时间类型
+  function timeType(num, event) {
+    console.log('展示时间类型'+num);
+    if(event) {
+      $(event.target).siblings().removeClass("active");
+      $(event.target).addClass("active");
+    }
+  }
+
+  $(function() {
+    let type = getQueryString("type");
+    let typeName;
+    switch (type) {
+      case "1":
+        typeName = "陶瓷价格指数列表";
+        $(".chart>p").html("<i></i>景德镇陶瓷价格指数");
+        $(".chart>span").html("<i></i>价格指数");
+        echartsInit(data, '价格指数');
+        break;
+      case "2":
+        typeName = "陶瓷创新指数列表";
+        $(".chart>p").html("<i></i>景德镇陶瓷创新指数");
+        $(".chart>span").html("<i></i>创新指数");
+        echartsInit(data, '创新指数');
+        break;
+      case "3":
+        typeName = "陶瓷关注指数列表";
+        $(".chart>p").html("<i></i>景德镇陶瓷关注指数");
+        $(".chart>span").html("<i></i>关注指数");
+        echartsInit(data, '关注指数');
+        break;
+      case "4":
+        typeName = "消费指数列表";
+        $(".chart>p").html("<i></i>景德镇陶瓷消费指数");
+        $(".chart>span").html("<i></i>消费指数");
+        echartsInit(data, '消费指数');
+        break;
+      case "5":
+        typeName = "旅游指数列表";
+        $(".chart>p").html("<i></i>景德镇陶瓷旅游指数");
+        $(".chart>span").html("<i></i>旅游指数");
+        echartsInit(data, '旅游指数');
+        break;
+      case "6":
+        typeName = "环境指数列表";
+        $(".chart>p").html("<i></i>景德镇陶瓷环境指数");
+        $(".chart>span").html("<i></i>环境指数");
+        echartsInit(data, '环境指数');
+        break;
+    }
+    $(".type-name").text(typeName);
+
+    $(".exponent a").eq(type).addClass("active");
+
+    //展示时间类型初始值 季度显示
+    timeType(1);
+  });
+</script>
+</body>
+
+</html>

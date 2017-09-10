@@ -1,0 +1,1 @@
+var reqUrl = 'http://114.215.19.11:40009/index.php';

@@ -1,0 +1,41 @@
+{
+  "name": "ceramics",
+  "version": "1.0.0",
+  "description": "ceramics for government",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "http": "http-server . -c-1 -p 4700",
+    "dev": "npm-run-all --parallel gulp http"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.1.231/guochangjian/ceramics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-preset-env": "^1.6.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-image": "^2.10.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "gulp.spritesmith": "^6.5.1",
+    "http-server": "^0.10.0",
+    "npm-run-all": "^4.0.2",
+    "spritesmith": "^3.1.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "gulp-class-prefix": "^1.0.1",
+    "jquery": "^3.2.1"
+  }
+}

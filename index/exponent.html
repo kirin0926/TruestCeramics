@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Public/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../Public/css/reset.css">
+    <link rel="stylesheet" href="../Public/css/index.css">
+    <title>陶瓷指数</title>
+    <style>
+        .exponent-list li div:nth-child(2).active {
+            z-index: 1;
+        }
+        .chart {
+            display: block;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .chart .item {
+            width: 86px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            border: 1px solid;
+            top: 50px;
+            z-index: 9;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .chart .item:nth-child(2) {
+            color: #01abff;
+            right: 260px;
+        }
+        .chart .item:nth-child(2).active {
+            background-color: #01abff;
+        }
+        .chart .item:nth-child(3) {
+            color: #01c35b;
+            right: 150px;
+        }
+        .chart .item:nth-child(3).active {
+            background-color: #01c35b;
+        }
+        .chart .item:nth-child(4) {
+            color: #ff7b01;
+            right: 40px;
+        }
+        .chart .item:nth-child(4).active {
+            background-color: #ff7b01;
+        }
+        .chart .item.active {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="banner-box">
+    <div class="banner margin0-auto">
+        <ul class="justify-between">
+            <li class=""><a href="../index.html"><i></i>首页</a></li>
+            <li class="active"><a href="exponent.html"><i></i>陶瓷指数</a></li>
+            <li class=""><a href="detail.html#1"><i></i>陶瓷博览</a></li>
+            <li class=""><a href="detail.html#2"><i></i>工匠精神</a></li>
+            <li class=""><a href="detail.html#3"><i></i>薪火相传</a></li>
+            <li class=""><a href="detail.html#4"><i></i>非遗文化</a></li>
+            <li class=""><a href="FamousList.html"><i></i>名家名品</a></li>
+        </ul>
+    </div>
+</div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="content-box">
+            <p class="title">
+                <i></i>
+                <span>
+                    中国景德镇陶瓷指数网
+                </span>
+                <span>
+                    ZHONGGUO JINGDEZHEN TAOCI ZHISHU WANG
+                 </span>
+            </p>
+
+            <div class="exponent">
+                <ul class="exponent-list">
+                    <li class="relative">
+                        <div class="rmb absolute">
+                            <p>陶瓷价格指数</p>
+                            <p>180.2</p>
+                            <p>
+                                <i class="up"></i>
+                                12.4%
+                            </p>
+                        </div>
+                        <div class="absolute active">
+
+                        </div>
+                    </li>
+                    <li class="relative">
+                        <div class="up-arrow absolute">
+                            <p>陶瓷价格指数</p>
+                            <p>180.2</p>
+                            <p>
+                                <i class="up"></i>
+                                12.4%
+                            </p>
+                        </div>
+                        <div class="absolute">
+
+                        </div>
+                    </li>
+                    <li class="relative">
+                        <div class="eyes absolute">
+                            <p>陶瓷价格指数</p>
+                            <p>180.2</p>
+                            <p>
+                                <i class="down"></i>
+                                12.4%
+                            </p>
+                        </div>
+                        <div class="absolute">
+
+                        </div>
+                    </li>
+                    <li class="relative">
+                        <div class="purse absolute">
+                            <p>陶瓷价格指数</p>
+                            <p>180.2</p>
+                            <p>
+                                <i class="up"></i>
+                                12.4%
+                            </p>
+                        </div>
+                        <div class="absolute">
+
+                        </div>
+                    </li>
+                    <li class="relative">
+                        <div class="people absolute">
+                            <p>陶瓷价格指数</p>
+                            <p>180.2</p>
+                            <p>
+                                <i class="down"></i>
+                                12.4%
+                            </p>
+                        </div>
+                        <div class="absolute">
+
+                        </div>
+                    </li>
+                    <li class="relative">
+                        <div class="leaves absolute">
+                            <p>陶瓷价格指数</p>
+                            <p>180.2</p>
+                            <p>
+                                <i class="down"></i>
+                                12.4%
+                            </p>
+                        </div>
+                        <div class="absolute">
+
+                        </div>
+                    </li>
+                </ul>
+                <div class="chart">
+                    <p class="relative">
+                        <i></i>
+                        陶瓷创新指数趋势
+                        <span class="item absolute active">全国</span>
+                        <span class="item absolute active">江西省</span>
+                        <span class="item absolute active">景德镇</span>
+                    </p>
+                    <div id="eChart"></div>
+                </div>
+            </div>
+
+            <div class="links relative">
+                <span class="absolute">友情链接</span>
+                <ul>
+                    <li><a href="" target="_blank"><img src="../src/images/top.png" alt=""></a></li>
+                    <li><a href="" target="_blank"><img src="../src/images/top.png" alt=""></a></li>
+                    <li><a href="" target="_blank"><img src="../src/images/top.png" alt=""></a></li>
+                    <li><a href="" target="_blank"><img src="../src/images/top.png" alt=""></a></li>
+                    <li><a href="" target="_blank"><img src="../src/images/top.png" alt=""></a></li>
+                    <li><a href="" target="_blank"><img src="../src/images/top.png" alt=""></a></li>
+                  </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="contactUs">
+    <!-- <div> -->
+    <a href="#">联系我们</a><span>|</span>
+    <a href="#">网站地图</a><span>|</span>
+    <a href="#">使用帮助</a><span>|</span>
+    <a href="#">法律声明</a><span>|</span>
+    <a href="#">隐私声明</a><span>|</span>
+    <a href="#">纠错信箱</a><span>|</span>
+    <a href="#">不良信息举报</a><span>|</span>
+    <a href="#">网络报警</a><span>|</span>
+    <!-- </div> -->
+</div>
+  <div class="footer">
+    <div><span class="concatItem">主办单位：景德镇市昌江区人民政府</span><span class="concatItem">联系电话：0798-1234567</span></div>
+    <div><span class="concatItem">支持单位：景德镇昌江区西郊街道、景德镇市瓷局、景德镇陶瓷大学</span><span class="concatItem">备案序号：赣ICP备12345678号</span></div>
+    <div><p></p></div>
+  </div>
+</body>
+</html>
+<script src="../Public/vendor/jquery/jquery.min.js"></script>
+<script src="../Public/vendor/bootstrap/js/bootstrap.js"></script>
+
+<script src="../Public/js/echarts.min.js"></script>
+
+<script>
+    function getData(){
+        let xAxisArr = ['2016年Q1','2016年Q2','2016年Q3','2016年Q4','2016年Q5','2016年Q6','2016年Q7'];
+        let d= [
+            [100, 200, 150, 100, 50, 200, 150],
+            [10, 20, 15, 10, 50, 20, 15],
+            [35, 24, 15, 30, 50, 40, 25]
+        ];
+        var data = [
+            [100, 200, 150, 100, 50, 200, 150],
+            [10, 20, 15, 10, 50, 20, 15],
+            [35, 24, 15, 30, 50, 40, 25]
+        ];
+
+        // 全国、省份、景德镇按钮
+        $(".item").bind('click',function () {
+            if($(this).hasClass('active')){
+                $(this).removeClass('active');
+                data[$(this).index()-1] = [];
+            }else{
+                $(this).addClass('active');
+                data[$(this).index()-1] = d[$(this).index()-1];
+            }
+            echartsInit(data, xAxisArr);
+        });
+
+//        $.ajax({
+//            type: "post",
+//            async: false,
+//            url: "",
+//            dataType: "json",
+//            data:{
+//                data: window.JSON.stringify({
+//
+//                })
+//            },
+//            success: function(json){
+//                if(json!=''){
+//                    data=json;
+//                }else{
+//                    alert("无数据");
+//                }
+//            },
+//            error:function(){
+//                alert("接口请求失败");
+//            }
+//        });
+        echartsInit(data, xAxisArr);
+    }
+
+    function echartsInit(data, xAxisArr){
+        var data = data;
+        var xAxisArr = xAxisArr;
+        var chart = document.getElementById("eChart");
+        var echart = echarts.init(chart);
+        let seriesArr = [
+            {
+                name:'全国',
+                type:'line',
+                itemStyle: {
+                    normal: {
+                        lineStyle: {
+                            color: '#01abff'
+                        },
+                        color:'#01abff'
+                    },
+                    emphasis: {
+                        color: '#01abff'
+                    }
+                },
+                data: data[0]
+            },
+            {
+                name:'江西省',
+                type:'line',
+                itemStyle: {
+                    normal: {
+                        lineStyle: {
+                            color: '#01c35b'
+                        },
+                        color:'#01c35b'
+                    },
+                    emphasis: {
+                        color: '#01c35b'
+                    }
+                },
+                data: data[1]
+            },
+            {
+                name:'景德镇',
+                type:'line',
+                itemStyle: {
+                    normal: {
+                        lineStyle: {
+                            color: '#ff7b01'
+                        },
+                        color:'#ff7b01'
+                    },
+                    emphasis: {
+                        color: '#ff7b01'
+                    }
+                },
+                data: data[2]
+            }
+        ];
+        var option = {
+            title: {
+                text: ''
+            },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer: {
+                    lineStyle: {
+                        type: 'dashed'
+                    }
+                },
+                backgroundColor: '#fff',
+                borderColor: '#e2e2e2',
+                borderWidth: 1,
+                textStyle: {
+                    color: '#464c5b'
+                },
+                padding: [ 14, 24, 14, 12],
+                extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);',
+                formatter: function(params) {
+                    var result = '';
+                    result += '<p><span style="font-weight: bold">时间：</span>'+params[0].name+'</p>'
+                    params.forEach(function (item) {
+                        result += '<p><span style="vertical-align:middle;display:inline-block;margin-right:5px;border-radius:10px;width:16px;height:5px;background-color:' + item.color + '"></span>'+'<span style="font-weight: bold;display:inline-block;margin-right: 5px;">'+item.seriesName+':</span>'+item.value+'</p>';
+                    });
+                    return result;
+                }
+            },
+            legend: {
+
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis : {
+                type : 'category',
+                boundaryGap : true,
+                data : xAxisArr,
+                axisLine: {
+                    lineStyle: {
+                        color: '#e2e2e2'
+                    }
+                },
+                axisLabel: {
+                    textStyle: {
+                        color: '#333'
+                    }
+                }
+            },
+            yAxis : {
+                type : 'value',
+                splitLine: {
+                    lineStyle: {
+                        type: 'dashed'
+                    }
+                },
+                axisLine: {
+                    show: false
+                },
+                axisTick: {
+                    show: false
+                }
+            },
+            series : seriesArr
+        };
+
+        echart.setOption(option);
+    }
+
+    getData();
+
+    // 切换指数种类
+    var exponentList = ['rmb', 'up-arrow', 'eyes', 'purse', 'people', 'leaves'];
+    $(".exponent-list li").click(function (){
+        $(".item").addClass("active");
+        $(".exponent-list li").find("div:nth-child(2)").removeClass("active");
+        $(".exponent-list li").eq($(this).index()).find("div:nth-child(2)").addClass("active");
+        console.log(exponentList[$(this).index()]);
+        getData();
+    });
+
+
+</script>

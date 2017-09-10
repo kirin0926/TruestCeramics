@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>友情链接</title>
+  <link rel="stylesheet" href="../public/vendor/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../public/vendor/bootstrap-fileinput/bootstrap-fileinput.css">
+  <link rel="stylesheet" href="../public/css/admin.css">
+</head>
+
+<body>
+  <header>
+    <nav class="admin-nav-top">
+      <div class="admin-logo">
+        <a href="">
+          <img src="../Public/images/admin_logo.png" alt="">
+          <div>
+            <h3>中国景德镇陶瓷指数网</h3>
+            <p>ZHONGGUO JINGDEZHEN TAOCI ZHISHU WANG</p>
+          </div>
+        </a>
+        <div class="page-info">
+          <i></i>
+          <span>后台管理</span>
+        </div>
+      </div>
+      <div>
+        <div class="userInfo">
+          <img src="../Public/images/user.png" alt="">
+          <i></i>
+          <div>
+            <p><a href="#">退出</a></p>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container-fluid">
+    <div class="sidebar">
+      <ul class="sidebar-menu">
+        <li class="sidebar-menu-item haveChild active">
+          <a href="">陶瓷博览</a>
+          <a href="#" class="child active">指数1</a>
+          <a href="#" class="child">指数2</a>
+          <a href="#" class="child">指数3</a>
+        </li>
+        <li class="sidebar-menu-item haveChild ">
+          <a href="">陶瓷指数</a>
+          <a href="#" class="child">指数2</a>
+          <a href="#" class="child">指数3</a>
+        </li>
+        <li class="sidebar-menu-item haveChild ">
+          <a href="">工匠精神</a>
+        </li>
+        <li class="sidebar-menu-item ">
+          <a href="">薪火相传</a>
+        </li>
+        <li class="sidebar-menu-item ">
+          <a href="">非遗文化</a>
+        </li>
+        <li class="sidebar-menu-item ">
+          <a href="javascript:;" class="sidebar-menu-title">名家名品</a>
+          <!-- <ul class="sidebar-submenu">
+            <li>
+              <a href="">名家管理</a>
+            </li>
+            <li>
+              <a href="">品牌管理</a>
+            </li>
+            <li>
+              <a href="">友情链接</a>
+            </li>
+          </ul> -->
+        </li>
+      </ul>
+
+    </div>
+    <div class="page-wraper">
+      <div class="crumb" style="">
+        <div>
+          <span>陶瓷博览</span>
+          <i>></i>
+          <a href="#">友情链接</a>
+        </div>
+        <!-- <div>
+          <button type="button" class="btn btn-primary newBtn"><i></i>创建文章</button>
+          <button type="button" class="btn btn-success newBtn"><i></i>发布文章</button>
+          <button type="button" class="btn btn-warning newBtn"><i></i>隐藏文章</button>
+        </div> -->
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading newPanel-heading">
+          <div class="panel-actions pull-right">
+          </div>
+          <h3 class="panel-title">创建友情链接</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <form class="form-horizontal jdz-form">
+                <div class="form-group form-group-sm">
+                  <label for="newsTitle" class="col-sm-2 control-label">链接名称</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" id="urlName"
+                    placeholder="链接名称">
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+                <div class="form-group form-group-sm">
+                  <label for="newsIntro" class="col-sm-2 control-label">链接地址</label>
+                  <div class="col-sm-5">
+                    <input name="" class="form-control introTextArea" id="urlVal"
+                      placeholder="链接地址" cols="10" rows="3">
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+                <div class="form-group form-group-sm">
+                  <label for="newsCover" class="col-sm-2 control-label">链接图片</label>
+                  <div class="col-sm-5">
+                    <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                      <div class="form-control flex-box" data-trigger="fileinput">
+                        <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                        <span class="fileinput-filename"></span>
+                      </div>
+                      <span class="input-group-addon btn btn-default btn-file">
+                        <span class="fileinput-new">+ 链接图片</span>
+                        <span class="fileinput-exists">更改</span>
+                        <input type="file" id="newsCover" name="newsCover">
+                      </span>
+                      <a href="#" class="input-group-addon btn btn-default fileinput-exists"
+                      data-dismiss="fileinput">移除</a>
+                    </div>
+                    <p class="help-block"></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <div class="panel-actions">
+            <button class="btn btn-sm btn-blue panel-btn">保存并返回</button>
+            <button class="btn btn-sm btn-green panel-btn">发布</button>
+            <button class="btn btn-sm btn-orange panel-btn">取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../Public/vendor/jquery/jquery.min.js"></script>
+  <script src="../Public/vendor/bootstrap/js/bootstrap.js"></script>
+  <script src="../Public/vendor/kindeditor/kindeditor-all-min.js"></script>
+  <script src="../Public/vendor/kindeditor/zh-CN.js"></script>
+  <script src="../Public/js/bootstrap-maxlength.js"></script>
+  <script src="../Public/vendor/bootstrap-fileinput/bootstrap-fileinput.js"></script>
+
+  <script src="../Public/js/jquery.nicescroll.min.js"></script>
+  <script>
+    $(".userInfo").click(function(){
+      $(".userInfo div").toggle();
+    })
+    $('.sidebar').niceScroll({
+      cursorcolor: '#ff9900',
+      autohidemode:'none'
+    });
+    $(".haveChild").click(function(e){
+      e.preventDefault();
+      if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+      }else{
+        $(this).addClass('active').siblings('.active').removeClass('active');
+      };
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,621 @@
+.banner-box {
+    background: url(../images/top.png) center top no-repeat;
+    background-size: 100% 56px;
+    position: fixed;
+    top: 0;
+    height: 52px;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 3px 3px #666;
+}
+.banner {
+    line-height: 51px;
+    max-width: 1000px;
+}
+.justify-between {
+    display: flex;
+    justify-content: space-around;
+}
+.margin0-auto {
+    margin: 0 auto;
+}
+.banner ul {
+    padding: 0;
+    margin: 0;
+}
+.banner li {
+    width: 122px;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    height: 52px;
+}
+.banner .active {
+    background-color: #fff;
+}
+.banner .active a {
+    color: #e14a00;
+}
+.banner .active:after {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid #e14a00;
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    margin-left: -3px;
+}
+.banner li a {
+    color: #fff;
+}
+.banner li i {
+    display: inline-block;
+    vertical-align: middle;
+    height: 17px;
+    width: 17px;
+    box-sizing: border-box;
+    margin-right: 6px;
+}
+.banner li:nth-child(1) i {
+    background: url(../images/feiyiwenhua.png);
+    background-size: 17px 17px;
+}
+.banner li:nth-child(2) i {
+    background: url(../icons/point.png);
+    background-size: 17px 17px;
+}
+.banner li:nth-child(3) i {
+    background: url(../icons/list.png);
+    background-size: 17px 17px;
+}
+.banner li:nth-child(4) i {
+    background: url(../icons/craftsman.png);
+    background-size: 17px 17px;
+}
+.banner li:nth-child(5) i {
+    background: url(../icons/fire.png);
+    background-size: 17px 17px;
+}
+.banner li:nth-child(6) i {
+    background: url(../icons/culture.png);
+    background-size: 17px 17px;
+}
+.banner li:nth-child(7) i {
+    background: url(../icons/famous.png);
+    background-size: 17px 17px;
+}
+.banner li:nth-child(1).active i {
+    background: url(../icons/culture2.png);
+    background-size: 17px 17px;
+}
+.banner li:nth-child(2).active i {
+    background: url(../icons/point2.png);
+    background-size: 17px 17px;
+}
+.banner li:nth-child(3).active i {
+    background: url(../icons/list2.png);
+    background-size: 17px 17px;
+}
+.banner li:nth-child(4).active i {
+    background: url(../icons/craftsman2.png);
+    background-size: 17px 17px;
+}
+.banner li:nth-child(5).active i {
+    background: url(../icons/fire2.png);
+    background-size: 17px 17px;
+}
+.banner li:nth-child(6).active i {
+    background: url(../icons/culture2.png);
+    background-size: 17px 17px;
+}
+.banner li:nth-child(7).active i {
+    background: url(../icons/famous2.png);
+    background-size: 17px 17px;
+}
+.banner li.active {
+    border: 1px solid transparent;
+    box-sizing: border-box;
+}
+
+.contactUs {
+    font-size: 12px;
+    text-align: center;
+    background: #ccc;
+    line-height: 32px;
+}
+.contactUs a {
+    color: #657180;
+    margin: 0 12px 0 11px;
+}
+.contactUs span {
+    color: #657180;
+}
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    background: url(../images/footer-bg.png);
+    background-size: cover;
+}
+.footer p {
+    background: url(../images/police.png);
+    height: 30px;
+    width: 26px;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.footer .concatItem {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 8px 5px;
+    line-height: 1.5;
+}
+
+.content{
+    background: #f5f7f9 url(../images/bg.jpg) no-repeat center top;
+    background-size: 100%;
+    margin-top: 52px;
+}
+.content-box {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+/*内容*/
+.title {
+    height: 40px;
+    width: 340px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.title i {
+    float: left;
+    width: 40px;
+    height: 40px;
+    background: url(../images/logo.png);
+    background-size: 40px 40px;
+}
+.title span {
+    float: left;
+    color: #fff;
+    padding-left: 10px;
+    width: 295px;
+}
+.title span:nth-child(2) {
+    font-size: 24px;
+    line-height: 25px;
+    text-align-last: justify;
+}
+.title span:nth-child(3) {
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.banner-content .absolute {
+    width: 58px;
+    height: 73px;
+    top: -20px;
+    left: 20px;
+    background-color: #01abff;
+    z-index: 9;
+}
+.banner-content .absolute span {
+    display: block;
+    margin: 12px auto;
+    width: 33px;
+    height: 46px;
+    color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    text-align: justify;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 3px;
+}
+.banner-content .banner {
+    float: left;
+    width: 600px;
+    height: 344px;
+}
+/*按钮*/
+.jssora051 {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    background-color: #000;
+    opacity: .2;
+}
+.jssora051 .a {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 360;
+    stroke-miterlimit: 10;
+}
+.jssora051:hover {
+    opacity: .8;
+}
+.jssora051.jssora051dn {
+    opacity: .5;
+}
+.jssora051.jssora051ds {
+    opacity: .3;
+    pointer-events: none;
+}
+
+.jssorb051 .i {position:absolute;cursor:pointer;}
+.jssorb051 .i .b {fill:#fff;}
+.jssorb051 .i:hover .b {fill-opacity:.7;}
+.jssorb051 .iav .b {fill-opacity: 1;fill:#01abff;}
+.jssorb051 .i.idn {opacity:.3;}
+
+
+/*轮播列表*/
+.banner-content > ul {
+    padding: 14px 24px;
+    width: 360px;
+    height: 344px;
+    overflow-y: scroll;
+    background-color: #fff;
+}
+.banner-content > ul li {
+    border-bottom: 1px solid #e3e8ee;
+    font-size: 12px;
+}
+.banner-content > ul li p:nth-child(1) {
+    color: #01abff;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 15px 0 11px;
+}
+.banner-content > ul  li p:nth-child(2) {
+    color: #657180;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.banner-content > ul  li p:nth-child(3) {
+    color: #9ea7b4;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+/*指数*/
+.exponent {
+    margin-top: 33px;
+    margin-bottom: 33px;
+}
+.exponent-list {
+    height: 105px;
+}
+.exponent-list li {
+    width: 162px;
+    height: 105px;
+    float: left;
+}
+.exponent-list li:nth-child(6) {
+    width: 149px;
+}
+.exponent-list li div:nth-child(1) {
+    width: 149px;
+    height: 103px;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    z-index: 9;
+}
+.rmb {
+    background: url(../images/rmb.png) 108px 48px no-repeat;
+}
+.up-arrow {
+    background: url(../images/up-arrow.png) 105px 48px no-repeat;
+}
+.eyes {
+    background: url(../images/eyes.png) 92px 54px  no-repeat;
+}
+.purse {
+    background: url(../images/purse.png) 96px 48px no-repeat;
+}
+.people {
+    background: url(../images/people.png) 94px 48px no-repeat;
+}
+.leaves {
+    background: url(../images/leaves.png) 95px 48px no-repeat;
+}
+.exponent-list li div p{
+    padding-left: 20px;
+}
+.exponent-list li div p:nth-child(1) {
+    font-size: 12px;
+    padding-top: 14px;
+    color: #657180;
+}
+.exponent-list li div p:nth-child(2) {
+    font-size: 32px;
+    font-weight: bold;
+}
+.exponent-list li div p:nth-child(3) {
+    font-size: 16px;
+    font-weight: bold;
+}
+.exponent-list li div p:nth-child(3) i {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    vertical-align: middle;
+}
+.exponent-list li div p:nth-child(3) i.up {
+    background: url(../images/up.png);
+    background-size: 8px 8px;
+}
+.exponent-list li div p:nth-child(3) i.down {
+    background: url(../images/down.png);
+    background-size: 8px 8px;
+}
+.exponent-list li div:nth-child(2) {
+    top: 20px;
+    left: -10px;
+    width: 169px;
+    height: 99px;
+    z-index: -1;
+    background: url(../images/exponent-bg.png);
+    background-size: 169px 99px;
+}
+.exponent-list li:hover div:nth-child(2) {
+    z-index: 1;
+}
+
+.chart {
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+}
+
+/* title */
+.chart > p,
+.gongjiangjingshen > p,
+.feiyiwenhua > p{
+    height: 36px;
+    line-height: 36px;
+    padding-left: 24px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #fff;
+    background: url(../images/title-bg.png);
+    background-size: 960px 36px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.chart > p i,
+.gongjiangjingshen > p i,
+.feiyiwenhua > p i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.chart > p i {
+    background: url(../images/qushi.png);
+    background-size: 20px 20px;
+}
+.gongjiangjingshen > p i {
+    background: url(../images/gongjiangjingshen.png);
+    background-size: 20px 20px;
+}
+.feiyiwenhua > p i {
+    background: url(../images/feiyiwenhua.png);
+    background-size: 20px 20px;
+}
+.chart {
+    display: none;
+}
+.chart > span {
+    top: 50px;
+    right: 40px;
+}
+.chart > span i {
+    vertical-align:middle;
+    display:inline-block;
+    margin-right:5px;
+    border-radius:10px;
+    width:16px;
+    height:5px;
+    background-color: #01abff;
+}
+#eChart {
+    height: 360px;
+    width: 960px;
+    background-color: #fff;
+}
+
+/*陶瓷博览*/
+.hash {
+    display: inline-block;
+}
+.taocibolan,
+.xinhuoxiangchuan {
+    width: 467px;
+    height: 376px;
+    display: inline-block;
+    color: #fff;
+    border-radius:  5px;
+    font-size: 14px;
+}
+.taocibolan a,
+.xinhuoxiangchuan a {
+    color: #fff;
+}
+.taocibolan {
+    background: url(../images/taocibolan-bg.png);
+    background-size: 467px 376px;
+    margin-right: 20px;
+}
+.xinhuoxiangchuan {
+    background: url(../images/xinhuoxiangchuan-bg.png);
+    background-size: 467px 376px;
+}
+.taocibolan > p,
+.xinhuoxiangchuan > p{
+    line-height: 35px;
+    border-bottom: 1px solid #4ec4ff;
+}
+.taocibolan > p > span,
+.xinhuoxiangchuan > p > span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin: 0 10px 0 25px;
+}
+.taocibolan > p > span {
+    background: url(../images/taocibolan.png);
+    background-size: 20px 20px;
+}
+.xinhuoxiangchuan > p > span {
+    background: url(../images/xinhuoxiangchuan.png);
+    background-size: 20px 20px;
+}
+.taocibolan-list,
+.xinhuoxiangchuan-list {
+    height: 340px;
+    overflow-y: scroll;
+}
+.taocibolan-item img,
+.xinhuoxiangchuan-item img {
+    width: 116px;
+    height: 113px;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+.taocibolan-item div,
+.xinhuoxiangchuan-item div {
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: 312px;
+    height: 107px;
+    margin-left: 16px;
+    padding-top: 14px;
+    font-size: 12px;
+    border-bottom: 1px solid #4ec4ff;
+}
+.taocibolan-item div p:nth-child(1),
+.xinhuoxiangchuan-item div p:nth-child(1) {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.taocibolan-item div p:nth-child(2),
+.xinhuoxiangchuan-item div p:nth-child(2) {
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+/*工匠精神*/
+.gongjiangjingshen div{
+    height:340px;
+}
+
+/*非遗文化*/
+.feiyiwenhua {
+    color: #979ea7;
+    font-size: 12px;
+}
+.video {
+    width: 600px;
+    height: 360px;
+    display: inline-block;
+}
+.feiyiwenhua-list {
+    background: #fff;
+    width: 356px;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.feiyiwenhua-item {
+    border-bottom: 1px solid #e3e8ee;
+    height: auto;
+}
+.feiyiwenhua-item img {
+    width: 120px;
+    height: 95px;
+    display: inline-block;
+    margin: 16px 25px 12px 0;
+    border: 1px solid red;
+}
+.feiyiwenhua-item div {
+    margin-top: 14px;
+    height: 75px;
+}
+.feiyiwenhua-item img + div {
+    width: 150px;
+    height: 122px;
+    display: inline-block;
+    vertical-align: top;
+}
+.feiyiwenhua-item div p:nth-child(1) {
+    font-size: 15px;
+    color: #01abff;
+    margin-bottom: 10px;
+}
+.feiyiwenhua-item div p:nth-child(2) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+/*友情链接*/
+.links {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #dadcde;
+    background: #fff;
+    padding-top: 30px;
+    border-radius: 5px;
+}
+.links ul{
+    width: 910px;
+    border-top: 1px solid #01abff;
+    margin: 0 auto;
+}
+.links > span {
+    width: 100px;
+    font-size: 14px;
+    color: #01abff;
+    top: 18px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: #fff;
+    text-align: center;
+}
+.links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.links li:nth-child(6) {
+    margin-right: 0;
+}
+.links img {
+    display: inline-block;
+    width: 131px;
+    height: 40px;
+    margin: 30px 0;
+}
